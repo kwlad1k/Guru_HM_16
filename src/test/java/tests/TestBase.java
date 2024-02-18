@@ -15,8 +15,8 @@ import java.util.Map;
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-        System.setProperty("environment", System.getProperty("environment", "stage"));
         DriverConfig driverConfig = ConfigFactory.create(DriverConfig.class);
+        System.setProperty("environment", System.getProperty("environment", "stage"));
 
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
